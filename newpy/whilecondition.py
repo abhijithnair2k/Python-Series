@@ -5,6 +5,6 @@ while i<=5:
        j=1
        while j<=4:
          print("SL", end="")
-         j=j+1
+     j=j+1
 i=i+1
 print()
