@@ -1,25 +1,30 @@
-pos = -1
-def search(list,n):
-    i=0
-    u=len(list)-1
 
-    while i<=u:
-        mid = (i+u) //2
-        if(list[mid]==n):
-            globals() ['pos']=mid
+
+
+pos = 0
+def search(list,n):
+    lower = 0
+    higher = len(list)-1
+    while lower <= higher:
+        mid = (lower+higher)//2
+        if list[mid] == n:
+            globals()['pos' ]= mid
             return True
         else:
-            if list[mid]<n:
-                i=mid
+            if list[mid] < n:
+                lower = mid +1
             else:
-                u=mid
+                higher = mid -1
 
 
 
-list = [1,3,4,5,9]
-n=3
 
+
+list = [2,1,34,54,3,56,32,98,100]
+list.sort()
+print(list)
+n=98
 if search(list,n):
-    print('found at ', pos+1)
+    print("found" , pos)
 else:
-    print('not found')
+    print("not found")

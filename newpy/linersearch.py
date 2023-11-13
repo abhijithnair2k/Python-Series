@@ -1,20 +1,27 @@
-def search(list,n):
-    for i in range(0, len(list) , 1):
-        if list[i] == n:
-            # print('found')
+
+
+pos=0
+def search(li,n):
+    i = 0
+    while i < len(li):
+        if li[i] == n :
+            globals() ['pos'] = i
             return True
+        i = i + 1
 
-        else:
-            return False
-
-
+    return False
 
 
 
-list = [1,3,4,5,9]
-n=1
 
-if search(list,n):
-    print('found')
+
+
+
+
+
+li = [2,1,4,76,54,34]
+n = int(input("enter the number"))
+if search(li,n):
+    print("found at", pos )
 else:
-    print('not found')
+    print("not found")
